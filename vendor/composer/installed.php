@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v9.1.8',
-        'version' => '9.1.8.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'fd3925c73587fc59d72459efee5c3a173d0bdaef',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'bagusindrayana/laravel-coordinate' => array(
+            'pretty_version' => '0.0.3',
+            'version' => '0.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bagusindrayana/laravel-coordinate',
+            'aliases' => array(),
+            'reference' => 'bb59dcb8b94bc14fef09d59cb43193075693bf0f',
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
             'version' => '0.9.3.0',
@@ -374,12 +383,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v9.1.8',
-            'version' => '9.1.8.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'fd3925c73587fc59d72459efee5c3a173d0bdaef',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -736,8 +745,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(

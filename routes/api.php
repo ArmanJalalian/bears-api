@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Bear;
+use App\Http\Controllers\BearController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('bears', function(){
-    return Bear::all();
-})->middleware('BearAuth');
+Route::get('/bears', [BearController::class, 'index']);
+Route::get('/bears/{longitude}/{latitude}', function ($longitude, $latitude) {
+    return;
+});
+
+Route::controller(BearController::class)->group(function(){
+    Route::get('/bears', 'index');
+    Route::get('/bear/{id}', 'show');
+    Route::get('/bears/{longitude}/{latitude}', 'filter');
+    Route::post('/bears', 'create');
+});

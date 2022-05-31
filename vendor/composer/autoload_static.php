@@ -163,6 +163,7 @@ class ComposerStaticInit388d2aaca85de4cd01dbe8284863daaf
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Bagusindrayana\\LaravelCoordinate\\' => 33,
         ),
         'A' => 
         array (
@@ -488,6 +489,10 @@ class ComposerStaticInit388d2aaca85de4cd01dbe8284863daaf
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Bagusindrayana\\LaravelCoordinate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bagusindrayana/laravel-coordinate/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -507,9 +512,11 @@ class ComposerStaticInit388d2aaca85de4cd01dbe8284863daaf
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BearController' => __DIR__ . '/../..' . '/app/Http/Controllers/BearController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
+        'App\\Http\\Middleware\\AuthenticateBearsApi' => __DIR__ . '/../..' . '/app/Http/Middleware/AuthenticateBearsApi.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -525,6 +532,7 @@ class ComposerStaticInit388d2aaca85de4cd01dbe8284863daaf
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Bagusindrayana\\LaravelCoordinate\\Traits\\LaravelCoordinate' => __DIR__ . '/..' . '/bagusindrayana/laravel-coordinate/src/Traits/LaravelCoordinate.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
