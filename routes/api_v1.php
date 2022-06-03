@@ -19,11 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/bears', [BearController::class, 'index']);
-Route::get('/bears/{longitude}/{latitude}', function ($longitude, $latitude) {
-    return;
-});
-
 Route::controller(BearController::class)->group(function(){
     Route::get('/bears', 'index');
     Route::get('/bear/{id}', 'show');

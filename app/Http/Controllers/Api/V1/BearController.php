@@ -11,7 +11,7 @@ class BearController extends Controller
 {
      //
      public function index() {
-        return Bear::all();
+        return Bear::paginate(100);
     }
 
     public function show(Bear $id) {
@@ -28,6 +28,6 @@ class BearController extends Controller
 
     public function create(Request $request) {
         $newBear = Bear::create($request->all());
-        return response()->json($id, 201, $headers);
+        return response()->json($newBear, 201);
     }
 }
