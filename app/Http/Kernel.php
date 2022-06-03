@@ -63,6 +63,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'BearAuth' => App\Http\Middleware\AuthenticateBearsApi::class
+        'BearAuth' => App\Http\Middleware\AuthenticateBearsApi::class,
+        'api_version' => Middleware\APIVersion::class
     ];
 }

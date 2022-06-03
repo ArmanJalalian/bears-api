@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use Illuminate\Http\Request;
 
-use App\Models\Bear;
+use App\Models\V1\Bear;
 use Illuminate\Support\Facades\DB;
 
-class BearController extends Controller
+class BearController /* extends Controller */
 {
     //
     public function index() {
