@@ -12,6 +12,8 @@ Deze route kan ook gebruikt worden om aan de hand van een post nieuwe beren toe 
 
 Wil je alleen beren binnen 25 km van een bepaalde locatie zien gebruik dan: /bears/{latitude}/{longitude}. Geef je eigen coördinaten mee als parameters en je kan zo snel mogelijk weer verder met je jacht.
 
+Ook zit er een limiet op het aantal requests wat je kan doen op deze api, het zijn er op dit moment 60 per minuut. Kom ik erachter dat er toch teveel op beren gejaagd wordt en ze het anders niet overleven dan zal dit nog omlaag gaan haha.
+
 Dit is versie 1 van de bears api en alles is opgesplit zodat er makkelijk een tweede versie gemaakt kan worden zonder dat de eerste versie hier last van heeft! Het is daarvoor wel nodig om voor iedere route api\v1 te zetten!
 
 Route lijst:
