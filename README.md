@@ -1,64 +1,31 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1> Bear API </h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aan de hand van het laravel framework heb ik ervoor gezorgd dat alle beren in Nederland opgejaagd kunnen worden door
+alle developers van Nederland.
 
-## About Laravel
+Natuurlijk is het ook mogelijk om nieuwe beren toe te voegen als je deze in het wild tegenkomt:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Om bij de data te kunnen komen is het handig om je eerste even te registreren met je naam, emailadres en natuurlijk een wachtwoord. Na het registreren of inloggen krijg je een authentication token die je mee kan geven aan je requests. Alleen met een authentication code is het mogelijk om de locaties van verschillende beren te kunnen zien. We willen natuurlijk niet dat iedereen op de beren kan jagen...
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Wil je alle beren zien navigeer naar: /bears/
+Deze route kan ook gebruikt worden om aan de hand van een post nieuwe beren toe te voegen
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Wil je alleen beren binnen 25 km van een bepaalde locatie zien gebruik dan: /bears/{latitude}/{longitude}. Geef je eigen coördinaten mee als parameters en je kan zo snel mogelijk weer verder met je jacht.
 
-## Learning Laravel
+Dit is versie 1 van de bears api en alles is opgesplit zodat er makkelijk een tweede versie gemaakt kan worden zonder dat de eerste versie hier last van heeft! Het is daarvoor wel nodig om voor iedere route api\v1 te zetten!
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Route lijst:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Get /bears
+Get /bears/{latitude}/{longitude}
+Post /bears
 
-## Laravel Sponsors
+Get /bear/{id}
+Put /bear/{id}
+Delete /bear/{id}
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+TODO:
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Validation op de meeste invulbare fields moet nog toegevoegd worden, wat erg belangrijk is.
+- Juiste RESTfull http error codes gebruiken.
+- 
