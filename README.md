@@ -28,4 +28,3 @@ TODO:
 
 - Validation op de meeste invulbare fields moet nog toegevoegd worden, wat erg belangrijk is.
 - Juiste RESTfull http error codes gebruiken.
-- 
