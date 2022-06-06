@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffd4bb0b9cd8f4f38730f2b2ce36a762",
+    "content-hash": "45a69d433e8f7a51cef6bfec681e4025",
     "packages": [
         {
             "name": "bagusindrayana/laravel-coordinate",
