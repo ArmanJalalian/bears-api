@@ -40,8 +40,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 /** 
 * All routes for the api are grouped pointing to the necessary controller
 * Needs authentication in the form of an token required by registering or login in.
+* Uses authentication using Laravel Sanctum Token generation.
+* Limits requests to 60 per minute.
 */
-Route::controller(BearController::class)->middleware('auth:sanctum')->group(function(){
+Route::controller(BearController::class)->middleware(['auth:sanctum', 'throttle:60,1'])->group(function(){
 
     /**
      * Collection api endpoints
